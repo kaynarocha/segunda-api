@@ -12,30 +12,34 @@ import java.util.Scanner;
 
 public class Calcular {
     @GetMapping("/soma")
-        public ResponseEntity<Integer> soma (
-                @RequestParam int numero1, @RequestParam int numero2) {
-        int soma = numero1 + numero2;
+        public ResponseEntity<Double> soma (
+                @RequestParam double numero1,
+                @RequestParam double numero2) {
+        double soma = numero1 + numero2;
+
         return ResponseEntity.ok(soma);
     }
 
     @GetMapping("/subtracao")
-    public ResponseEntity<Integer> subtracao (
-            @RequestParam int numero1, @RequestParam int numero2) {
-        int subtracao = numero1 - numero2;
+    public ResponseEntity<Double> subtracao (
+            @RequestParam double numero1,
+            @RequestParam double numero2) {
+        double subtracao = numero1 - numero2;
         return ResponseEntity.ok(subtracao);
     }
 
     @GetMapping("/multi")
-    public ResponseEntity<Integer> multi (
-            @RequestParam int numero1, @RequestParam int numero2) {
-        int multi = numero1 * numero2;
+    public ResponseEntity<Double> multi (
+            @RequestParam double numero1, @RequestParam double numero2) {
+        double multi = numero1 * numero2;
         return ResponseEntity.ok(multi);
     }
 
     @GetMapping("/divisao")
-    public ResponseEntity<Integer> divisao (
-            @RequestParam int numero1, @RequestParam int numero2) {
-        int divisao = numero1/numero2;
+    public ResponseEntity<Double> divisao (
+            @RequestParam double numero1,
+            @RequestParam double numero2) {
+        double divisao = numero1/numero2;
         return ResponseEntity.ok(divisao);
     }
 
